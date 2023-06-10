@@ -58,5 +58,32 @@
                 Console.WriteLine($"{num}\t");
             }
         }
+
+        public void SortArray()
+        {
+            int[] nums = { 54, 7, -41, 2, 4, 2, 89, 33, -5, 12 };
+
+            int temp = 0;
+
+            for(int i = 0; i < nums.Length - 1;i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] > nums[j])
+                    {
+                        temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                    }
+                }
+            }
+
+            Console.WriteLine("Sorted");
+
+            foreach(int num in nums)
+            {
+                Console.WriteLine(num);
+            }
+        }
     }
 }
